@@ -1,6 +1,6 @@
 {
     "functions": {
-        "api/index.php": {
+        "pcpicapi/index.php": {
             "runtime": "vercel-php@0.4.0",
             "excludeFiles": "{test/**}",
             "memory": 1024,
@@ -10,7 +10,24 @@
     "routes": [
         {
             "src": "/(\\w*)\\.(?:jpg|jpeg|png|gif|bmp|webp)",
-            "dest": "/api/index.php?id=$1"
+            "dest": "/pcpicapi/index.php?id=$1"
+        }
+    ]
+}
+
+{
+    "functions": {
+        "mopicapi/index.php": {
+            "runtime": "vercel-php@0.4.0",
+            "excludeFiles": "{test/**}",
+            "memory": 1024,
+            "maxDuration": 10
+        }
+    },
+    "routes": [
+        {
+            "src": "/(\\w*)\\.(?:jpg|jpeg|png|gif|bmp|webp)",
+            "dest": "/mopicapi/index.php?id=$1"
         }
     ]
 }

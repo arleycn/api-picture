@@ -7,10 +7,10 @@ function has_query($query)
 {
     return isset($_GET[$query]);
 }
-if (file_exists('../url.csv')) {
-    $imgs_array = file('../url.csv', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+if (file_exists('../pcpicurl.csv')) {
+    $imgs_array = file('../pcpicurl.csv', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
 } else {
-    $imgs_array = file('http://' . $_SERVER['HTTP_HOST'] . '/url.csv', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+    $imgs_array = file('http://' . $_SERVER['HTTP_HOST'] . '/pcpicurl.csv', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
 }
 if (count($imgs_array) == 0) {
     $imgs_array = ['https://http.cat/503'];
