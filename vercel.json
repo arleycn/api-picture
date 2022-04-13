@@ -14,7 +14,7 @@
         }
     ],
         "functions": {
-        "mopicapi/api/index.php": {
+        "api/mopicapi/index.php": {
             "runtime": "vercel-php@0.4.0",
             "excludeFiles": "{test/**}",
             "memory": 1024,
@@ -24,7 +24,7 @@
     "routes": [
         {
             "src": "/(\\w*)\\.(?:jpg|jpeg|png|gif|bmp|webp)",
-            "dest": "mopicapi/api/index.php?id=$1"
+            "dest": "/api/mopicapi/index.php?id=$1"
         }
     ]
 }
